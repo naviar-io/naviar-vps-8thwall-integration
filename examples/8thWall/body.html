@@ -1,0 +1,25 @@
+<!-- Copyright (c) 2022 8th Wall, Inc. -->
+<!-- body.html is optional; elements will be added to your html body after app.js is loaded. -->
+
+<div id="controlsWrapper">
+  <div class="flex">
+    <button id="hideControls">hide</button>
+    <div id="statusMarker"></div>
+  </div>
+  <div id="controlsContainer">
+    <div class="controlsFlex">
+      <div>location</div>
+      <select name="location" id="locationSelect">
+    </select>
+    </div>
+    <div class="controlsFlex" id="controls">
+      <div id="vpsStatus">vps status:</div>
+      <button id="pauseButton"></button>
+    </div>
+    <div class="controlsFlex" id="interpolationControl">
+      <div>interplolation</div>
+      <button id="switchInterpolation">instant</button>
+    </div>
+    <img style="display: none" id="testImage" />
+  </div>
+</div>
