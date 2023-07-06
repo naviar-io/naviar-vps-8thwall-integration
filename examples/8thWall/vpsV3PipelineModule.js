@@ -244,6 +244,7 @@ export const vpsV3PipelineModule = () => {
 
       setTimeout(() => {
         try {
+          statusMarkerEl = document.getElementById('statusMarker')
           vpsStatusEl = document.getElementById('vpsStatus')
           pauseButtonEl = document.getElementById('pauseButton')
           switchInterpolationTypeButton = document.getElementById('switchInterpolation')
@@ -329,10 +330,6 @@ export const vpsV3PipelineModule = () => {
               }
             })
 
-            document.getElementById('intrinsics').addEventListener('input', (ev) => {
-              fxfy = Number.parseFloat(ev.target.value)
-            })
-
             locationSelectEl.addEventListener('change', (ev) => {
               currentLocation = availableLocations.find(loc => loc.location_id === ev.target.value)
 
@@ -356,8 +353,6 @@ export const vpsV3PipelineModule = () => {
                 }
               }
             })
-
-            statusMarkerEl = document.getElementById('statusMarker')
           }
         } catch (err) {
           console.log(err)
